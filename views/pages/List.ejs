@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+
+<body class="text-center">
+    <div class="d-flex p-5">
+        <form action="/form">
+            <button type="submit" class="btn btn-primary">Add</button>
+
+        </form>
+        <!-- <form action="/read"> -->
+        <a type="submit" href="/read" class="btn btn-primary">Read file</a>
+
+        <!-- </form> -->
+    </div>
+    <h1>Lists</h1>
+    <div class="ctr mt-5 p-5">
+        <table class="table w-75 text-center table-danger table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% data.forEach(item=> { %>
+                    <tr>
+                        <td>
+                            <%= item.name %>
+                        </td>
+                        <td>
+                            <%= item.email %>
+                        </td>
+                        <td>
+                            <%= item.phone_number%>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
+    </div>
+</body>
+<script src="https://kit.fontawesome.com/81ddcacba4.js" crossorigin="anonymous"></script>
+
+</html>

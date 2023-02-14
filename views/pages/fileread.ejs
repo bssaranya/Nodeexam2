@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body>
+    <div style="display: flex">
+        <form action="/read" method="post">
+            Starting position
+            <input type="number" name="Start" />
+
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+        <a href="/form/List" type="submit" class="btn btn-secondary">Cancel</a>
+    </div>
+    <p>
+        <%= filecontent %>
+    </p>
+</body>
+
+</html>
